@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 .btn-container {
@@ -149,11 +150,17 @@
 
 #image-card {
     background: rgb(255, 255, 255);
-    margin: 0px 0px 0px 150px;
+    margin: auto;
     width: 80%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     align-items: center;
+
+}
+
+#food-img {
+    width: 50%;
 }
 
 .title-1 {
@@ -237,22 +244,107 @@ h4 {
     padding: 0px;
     margin-top: 50px;
     margin-bottom: 20px;
-   
+
 }
 
-#card1{
+#card1 {
     border: 2px dotted gray;
     padding: 2px;
 }
 
 /* social  */
-#social{
+#social {
     background-image: linear-gradient(188deg, rgb(237, 204, 204) -19.5%, rgba(229, 196, 196, 0.582) 100%),
-    url("../assets/social-bg.png");
-margin-bottom: 50px;
-margin-top: 50px;
+        url("../assets/social-bg.png");
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
-.social-info{
+.social-info {
     padding: 30px;
+}
+
+
+
+/* unnecessary */
+.hide {
+    display: none;
+}
+
+/* Responsive starts here */
+
+/* for small devices */
+
+@media screen and (max-width: 576px) {
+    #card-box {
+        width: 100%;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    #image-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    #cards-info {
+        margin-top: 60px;
+
+    }
+
+   
+
+}
+
+
+/* for medium devices  */
+@media screen and (min-width:576px) and (max-width:990px) {
+    #hero {
+        width: 100%;
+    }
+
+    .hero-content {
+        width: 100%;
+
+    }
+
+    #card-box {
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+    }
+
+    #image-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    #cards-info {
+        margin-top: 60px;
+
+    }
+
 }
